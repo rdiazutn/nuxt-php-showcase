@@ -1,0 +1,30 @@
+query GetUserDashboard(
+    $notificationFilter: NotificationFilter
+    $notificationLimit: Int
+    $notificationPage: Int
+) {
+    me {
+        taxes {
+            id
+            name
+            short_name
+            status
+            expires_at
+        }
+        notifications(first: $notificationLimit, page: $notificationPage, filter: $notificationFilter) {
+            data {
+                id
+                type
+                read
+                bookmarked
+                title
+                body
+            }
+        }
+    }
+    taxStatus: __type(name: "TaxStatus") {
+        enumValues {
+            name
+        }
+    }
+}

@@ -1,0 +1,55 @@
+version: '3'
+
+networks:
+  tm-network:
+
+services:
+
+  nginx-tm:
+    
+    dns: 8.8.8.8
+    container_name: nginx-tm
+    build: ./env/nginx
+    ports:
+      - "${NGINX_PORT}:80"
+    volumes:
+      - ${TM_SOURCE_CODE}:/var/www
+      - ./env/nginx/conf/:/etc/nginx/conf.d
+      - ./env/nginx/logs:/var/log/nginx
+    networks:
+      - tm-network
+
+  php-tm:
+    dns: 8.8.8.8
+    container_name: php-tm
+    build: ./env/php-fpm
+    environment:
+        - PUID=${DOCKER_UID:-1000}
+        - PGID=${DOCKER_GID:-1000}
+    tty: true
+    volumes:
+      - ${TM_SOURCE_CODE}:/var/www
+    networks:
+      - tm-network
+
+  database-tm:
+    container_name: database-tm
+    image: mysql:${MYSQL_VERSION}
+    restart: always
+    command: "--innodb_use_native_aio=0"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}:3306
+    expose:
+      - 3306
+    networks:
+      - tm-network
+    volumes:
+      - ./run/var:/var/lib/mysql
+      - ./run/config/:/etc/mysql/conf.d
+

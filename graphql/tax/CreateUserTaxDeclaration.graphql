@@ -1,0 +1,10 @@
+mutation CreateUserTaxDeclaration($data: String!, $declarationId: ID!) {
+    createUserTaxDeclaration(input: {
+        data: $data,
+        taxDeclaration: {
+            connect: $declarationId
+        }
+    }) {
+        id
+    }
+}

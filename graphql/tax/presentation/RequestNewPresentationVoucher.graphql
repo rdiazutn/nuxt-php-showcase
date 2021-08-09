@@ -1,0 +1,5 @@
+mutation RequestNewPresentationVoucher($periodId: ID! $input: RequestNewPresentationVoucher!) {
+    requestNewPresentationVoucher(periodId: $periodId input: $input) {
+        id
+    }
+}

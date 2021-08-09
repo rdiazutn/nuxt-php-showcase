@@ -1,0 +1,35 @@
+query GetMyTaxDeclaration($id: ID!){
+    payment_methods: __type(name: "PaymentMethodType") {
+        enumValues {
+            name
+            description
+        }
+    }
+    me {
+        taxPeriods(id: $id first: 1) {
+            data {
+                id
+                presentation {
+                    voucher_expiration_date
+                    amount
+                    balance
+                    used_balance
+                    voucher_generation_date
+                    payment_method
+                    draft {
+                        name
+                        url
+                    }
+                    presentation {
+                        name
+                        url
+                    }
+                    voucher {
+                        name
+                        url
+                    }
+                }
+            }
+        }
+    }
+}

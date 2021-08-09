@@ -1,0 +1,5 @@
+mutation ConfirmPresentationVoucher($periodId: ID!) {
+    confirmPresentationVoucher(periodId: $periodId) {
+        id
+    }
+}

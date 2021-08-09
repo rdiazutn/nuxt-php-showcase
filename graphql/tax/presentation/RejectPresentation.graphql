@@ -1,0 +1,5 @@
+mutation RejectPresentation($periodId: ID! $comment: String) {
+    rejectPresentation(periodId: $periodId comment: $comment) {
+        id
+    }
+}

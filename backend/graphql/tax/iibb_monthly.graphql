@@ -1,0 +1,89 @@
+extend type TaxPeriod {
+    IIBBMonthlyDeclaration: IIBBMonthly! @method(name: "getIIBBMonthlyDeclaration")
+}
+
+type IIBBMonthly {
+    billing: IIBBMonthlyBillingQuestion!
+    not_invoiced: IIBBMonthlyNotInvoicedIncomeQuestion!
+    not_income: IIBBMonthlyNotIncomeBillingQuestion!
+    deductions: IIBBMonthlyDeductionsQuestion!
+}
+
+type IIBBMonthlyBillingRegion {
+    key: ID!
+    name: String!
+    percentage: Int!
+    value: Float
+    iva: Float
+}
+
+type IIBBMonthlyBillingActivity {
+    key: ID!
+    label: String!
+    regions: [IIBBMonthlyBillingRegion!]!
+}
+
+type IIBBMonthlyBillingQuestion {
+    condition: CustomerCondition!
+    activities: [IIBBMonthlyBillingActivity!]!
+}
+
+type IIBBMonthlyNotInvoicedIncomeQuestion {
+    concepts: [InputLayout!]!
+    extra: [InputLayout!]!
+}
+
+type IIBBMonthlyNotIncomeBillingQuestion {
+    concepts: [InputLayout!]!
+    extra: [InputLayout!]!
+}
+
+type IIBBMonthlyDeductionsQuestion {
+    with_holdings: [InputLayout!]!
+    perceptions: [InputLayout!]!
+    sircreb: [InputLayout!]!
+}
+
+# Mutation
+
+extend type Mutation {
+    answerIIBBMonthlyDeclaration(periodId: ID!, input: AnswerIIBBMonthlyDeclarationInput!): IIBBMonthly!
+}
+
+input AnswerIIBBMonthlyDeclarationInput {
+    billing: IIBBMonthlyBillingQuestionInput!
+    not_invoiced: IIBBMonthlyNotInvoicedIncomeQuestionInput!
+    not_income: IIBBMonthlyNotIncomeBillingQuestionInput!
+    deductions: IIBBMonthlyDeductionsQuestionInput!
+}
+
+input IIBBMonthlyBillingRegionInput {
+    key: ID!
+    value: Float!
+    iva: Float!
+}
+
+input IIBBMonthlyBillingActivityInput {
+    key: ID!
+    regions: [IIBBMonthlyBillingRegionInput!]!
+}
+
+input IIBBMonthlyBillingQuestionInput {
+    activities: [IIBBMonthlyBillingActivityInput!]!
+}
+
+input IIBBMonthlyNotInvoicedIncomeQuestionInput {
+    concepts: [InputLayoutInput!]!
+    extra: [InputLayoutInput!]!
+}
+
+input IIBBMonthlyNotIncomeBillingQuestionInput {
+    concepts: [InputLayoutInput!]!
+    extra: [InputLayoutInput!]!
+}
+
+input IIBBMonthlyDeductionsQuestionInput {
+    withholdings: [InputLayoutInput!]!
+    perceptions: [InputLayoutInput!]!
+    sircreb: [InputLayoutInput!]!
+}

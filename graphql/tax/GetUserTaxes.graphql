@@ -1,0 +1,14 @@
+query getUserTaxes($userId: ID!) {
+    user(userId: $userId) {
+        taxes {
+            id
+            name
+            period_type
+            userPendingPeriods {
+                id
+                created_at
+                status
+            }
+        }
+    }
+}

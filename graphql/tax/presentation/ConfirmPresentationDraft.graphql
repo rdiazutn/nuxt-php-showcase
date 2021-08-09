@@ -1,0 +1,5 @@
+mutation ConfirmPresentationDraft($periodId: ID! $input: ConfirmPresentationDraftInput!) {
+    confirmPresentationDraft(periodId: $periodId input: $input) {
+        id
+    }
+}

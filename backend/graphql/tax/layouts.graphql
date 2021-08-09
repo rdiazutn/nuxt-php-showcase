@@ -1,0 +1,12 @@
+type InputLayout {
+    key: ID!
+    label: String!
+    value: String
+}
+
+# Inputs
+
+input InputLayoutInput {
+    key: ID!
+    value: String!
+}

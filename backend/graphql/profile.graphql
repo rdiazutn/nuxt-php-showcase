@@ -1,0 +1,60 @@
+type Mutation {
+    answerProfileQuestions(answers: [AnswerProfileQuestionInput!]!): [ProfileQuestion!]!
+}
+
+type QuestionOption {
+    label: String!
+    value: String!
+}
+
+type QuestionValue {
+    key: String!
+    value: String!
+}
+
+type QuestionInput {
+    key: String!
+    label: String!
+    type: InputType!
+    value: String
+}
+
+type Question {
+    input_label: String
+    input_rules: [String]
+    inputs: [QuestionInput]
+    options: [QuestionOption]
+    value: String
+    selected: [String]
+    values: [QuestionValue]
+}
+
+type Rule {
+    key: QuestionRule!
+    parameters: [String]!
+}
+
+type ProfileQuestion {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    title: String!
+    body: String!
+    image: String!
+    order: Int!
+    type: ProfileQuestionType!
+    question: Question!
+    rules: [Rule]!
+}
+
+input ValueInput {
+    key: String!
+    value: String!
+}
+
+input AnswerProfileQuestionInput {
+    profile_question_id: ID!
+    value: String
+    selected: [String]
+    values: [ValueInput]
+}

@@ -1,0 +1,10 @@
+<template>
+  <TheButtonWithTooltip
+    v-bind="$attrs"
+    :title="$t('delete')"
+    color="red"
+    dark
+    icon="mdi-trash-can-outline"
+    v-on="$listeners"
+  />
+</template>

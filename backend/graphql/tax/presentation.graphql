@@ -1,0 +1,39 @@
+extend type TaxPeriod {
+    presentations: [TaxPeriodPresentation!]!
+    presentation: TaxPeriodPresentation
+}
+
+type TaxPeriodPresentation {
+    voucher_expiration_date: Date!
+    amount: Float!
+    balance: Float!
+    comment: String
+    used_balance: Float!
+    voucher_generation_date: DateTime
+    payment_method: PaymentMethodType
+    draft: File!
+    presentation: File
+    voucher: File
+}
+
+extend type Mutation {
+    # Draft
+    rejectPresentationDraft(periodId: ID! comment: String): TaxPeriod!
+    confirmPresentationDraft(periodId: ID! input: ConfirmPresentationDraftInput!): TaxPeriod!
+    # Payment
+    confirmPresentationVoucher(periodId: ID!): TaxPeriod!
+    requestNewPresentationVoucher(periodId: ID! input: RequestNewPresentationVoucher!): TaxPeriod!
+    # TODO Presentation
+    rejectPresentation(periodId: ID! comment: String): TaxPeriod!
+}
+
+input ConfirmPresentationDraftInput {
+    used_balance: Float!
+    payment_method: PaymentMethodType!
+}
+
+input RequestNewPresentationVoucher {
+    used_balance: Float!
+    payment_method: PaymentMethodType!
+    voucher_generation_date: DateTime!
+}

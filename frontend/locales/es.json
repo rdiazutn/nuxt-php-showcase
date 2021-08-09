@@ -1,0 +1,146 @@
+{
+    "email": "E-mail",
+    "taxmotor_name": "Taxmotor",
+    "password": "Contraseña",
+    "register_verb": "¡Regístrate!",
+    "continue": "Continuar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "percentage": "Porcentaje",
+    "go_back": "Atrás",
+    "close": "Cerrar",
+    "send_form": "Enviar formulario",
+    "tax_plural": "Impuestos",
+    "tax": "Impuesto",
+    "actions": "Acciones",
+    "no_data_autocomplete": "No hay información aún...",
+    "period": "Periodo",
+    "search": "Buscar",
+    "see": "Ver",
+    "download": "Descargar",
+    "loading": "Cargando",
+    "no_data_text": "No hay información aún",
+    "items-per-page": "Items por página",
+    "messages": "Mensajes",
+    "information": "Información",
+    "ON_TIME": "Al día",
+    "PENDING": "Pendiente",
+    "PREPARING": "Preparando",
+    "RETURNED": "Devuelto",
+    "bookmark": "Destacar",
+    "unbookmark": "No destacar",
+    "clear_filters": "Borrar filtros",
+    "select_all": "Seleccionar todo",
+    "bookmarks": "Destacados",
+    "read": "Leer",
+    "read_past": "Leídos",
+    "unread": "No leídos",
+    "all_messages": "Todos los estados",
+    "status": "Estado",
+    "update_date": "Fecha de actualización",
+    "new": "Nuevo",
+    "all_states": "Todos los estados",
+    "refresh": "Actualizar",
+    "delete": "Borrar",
+    "load": "Cargar",
+    "mark_as_read": "Marcar como leído",
+    "saved_ok": "Guardado correctamente",
+    "edit": "Editar",
+    "save": "guardar",
+    "home": {
+        "menu": "Inicio",
+        "profile": "Perfil",
+        "documents": "Documentos",
+        "taxes": "Mis impuestos",
+        "account": "Mi cuenta",
+        "historic": "Histórico",
+        "dashboard": "Dashboard"
+    },
+    "login": {
+        "form_title": "Para acceder, ingresá tus datos",
+        "remember_credentials": "Recordar mis datos",
+        "forget_password": "Olvidé mi contraseña",
+        "access": "Ingresar",
+        "register_message": "Si aún no estás registrado",
+        "welcome_message": "Te damos la bienvenida a Taxmotor",
+        "welcome_description_1": "El mejor sistema del mercado para la ",
+        "welcome_description_2": "Gestión impositiva."
+    },
+    "error_page": {
+        "upps": "Ups...",
+        "not_found": "La página que buscabas no se encuentra disponible",
+        "unexpected_error": "Hubo un error inesperado",
+        "return_message": "Clickea aquí para seguir utilizando Taxmotor"
+    },
+    "errors": {
+        "required": "Campo requerido",
+        "sum_100": "El valor de los campos debe sumar 100",
+        "positive": "El valor ingresado debe ser positivo"
+    },
+    "avatar":{
+        "profile": "Perfil",
+        "logout": "Cerrar sesión"
+    },
+    "layout_default": {
+        "information_title": "Términos y condiciones",
+        "information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    },
+    "profile": {
+        "not_first_time": {
+            "title": "Mis respuestas"
+        },
+        "first_time": {
+            "title": "¡Empecemos! Respondé las siguientes preguntas.",
+            "save_questions": "Guardá tus respuestas y seguí en otro momento"
+        }
+    },
+    "documents": {
+        "title": "Documentos",
+        "document_type": "Tipo de documento"
+    },
+    "dashboard": {
+        "title": "¡Hola! {name} Estamos al día",
+        "welcome": "¡Te damos la bienvenida a Taxmotor!",
+        "text1": "A continuación, responderás una serie de preguntas para que te ayudemos.",
+        "text2": " Recordá que si querés modificar alguna respuesta, lo harás en el momento. O bien, al finalizar tendrás un resumen de lo ingresado para que lo cambies.",
+        "text_green": "Con nosotros, pagar impuestos, es más fácil",
+        "lets_start": "¡Empecemos!",
+        "next_expirations": "Próximos vencimientos",
+        "last_events": "Últimos eventos",
+        "check_event": "Verificar evento",
+        "see_all_events": "Ver todos los eventos",
+        "messages": {
+            "search_message": "Buscar mensaje"
+        },
+        "bookmark_text": "¿Está seguro que desea destacar los mensajes seleccionados?",
+        "open_text": "¿Está seguro que desea marcar como leídos los mensajes seleccionados?",
+        "delete_text": "¿Está seguro que desea eliminar los mensajes seleccionados?"
+    },
+    "taxes": {
+        "upload": "Cargar impuesto",
+        "title": "Mis impuestos",
+        "show_historic": "Ver histórico",
+        "need_help": "Necesito ayuda",
+        "declaration": {
+            "load_suggestion": "Desde acá, cargarás tus datos de manera manual. Recordá revisar los campos ingresados para que coincidan correctamente con tu facturación. O bien, subir un archivo con toda la información.",
+            "activity_bill": "Facturación por actividad",
+            "soy_agriculture": "Cultivo de soja",
+            "province_bill": "Facturación por provincia",
+            "dont_billed_incomes": "Ingresos no facturados",
+            "facturacion no-ingresos": "Facturación no-ingresos",
+            "total_amount": "Monto total a pagar",
+            "available_balance": "Saldo total a favor",
+            "payment_methods_vep": "Elegí el método de pago del VEP",
+            "ready_presentation": "Tu presentación está lista",
+            "download_presentation": "Descargar presentación",
+            "use_balance": "Utilizar saldo a favor",
+            "your_steps": "Tus pasos",
+            "document_type": "Tipo de documento",
+            "load": "Cargar",
+            "present": "Presentación"
+        }
+    },
+    "historic": {
+        "title": "Histórico"
+    }
+}

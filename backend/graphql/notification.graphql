@@ -1,0 +1,23 @@
+input NotificationFilter {
+    bookmarked: Boolean @scope(name: "bookmarked")
+    read: Boolean @scope(name: "read")
+}
+
+type Notification {
+    id: ID!
+    created_at: DateTime!
+    type: String!
+    read: Boolean!
+    bookmarked: Boolean!
+    title: String
+    body: String
+}
+
+extend type Mutation {
+    updateNotification(id: ID! input: NotificationInput @spread): Notification @update
+}
+
+input NotificationInput {
+    read: Boolean
+    bookmarked: Boolean
+}

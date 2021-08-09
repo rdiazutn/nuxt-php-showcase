@@ -1,0 +1,43 @@
+extend type Customer {
+    taxes: [Tax!]! @belongsToMany
+    taxPeriods(id: [ID!] @in tax_id: [ID!] @in status: [TaxPeriodStatus] @in, period_date: Date @eq): [TaxPeriod!]! @hasMany(type: PAGINATOR)
+}
+
+type Tax {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    name: String!
+    short_name: String!
+    period_type: TaxPeriodType!
+    status: TaxStatus!
+    expires_at: Date
+    taxPeriods: [TaxPeriod]! @hasMany
+    profileQuestions: [ProfileQuestion!]! @belongsToMany
+}
+
+type TaxPeriod
+{
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    status: TaxPeriodStatus!
+    period_date: Date!
+    expiration_date: Date!
+    customer: Customer! @belongsTo
+    tax: Tax! @belongsTo
+    documents: [Document!]! @hasMany
+}
+
+type Document
+{
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    taxPeriod: TaxPeriod! @belongsTo
+    file: File! @belongsTo
+}
+
+#import tax/presentation.graphql
+#import tax/layouts.graphql
+#import tax/iibb_monthly.graphql

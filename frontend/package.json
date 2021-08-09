@@ -1,0 +1,42 @@
+{
+  "name": "frontend-taxmotor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/auth-next": "5.0.0-1611574754.9020f2a",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "core-js": "^3.6.5",
+    "graphql-tag": "^2.11.0",
+    "nuxt": "2.14.6",
+    "vue-i18n": "^8.22.4",
+    "vue-loading-spinner": "^1.0.11",
+    "vue-moment": "^4.1.0",
+    "vue-toasted": "^1.1.28"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.12.17",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.5.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "jest": "^26.5.0",
+    "vue-jest": "^3.0.4"
+  }
+}

@@ -1,0 +1,11 @@
+query{
+  me{
+    taxes{
+      name
+      short_name
+      id
+	  status
+      updated_at
+    }
+  }
+}

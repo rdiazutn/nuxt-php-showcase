@@ -1,0 +1,17 @@
+query GetMyTaxDeclarations($taxId:ID!, $status: [TaxPeriodStatus], $page: Int, $first: Int!){
+  me{
+    taxPeriods(taxId: [$taxId], status: $status, first: $first, page: $page){
+      paginatorInfo{
+        total
+      }
+      data{
+        id
+        status
+        #period_date hasta resolver bug de back
+        tax{
+          name
+        }
+      }
+    }
+  }
+}

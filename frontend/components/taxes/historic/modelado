@@ -1,0 +1,48 @@
+
+
+tax: [
+	{
+		total_amonunt: 9456,
+		total_balance: 3548,
+		payment_methods_vep: [
+			{
+				name: 'Mercado Libre'
+			},
+			{
+				name: 'Red Link'
+			},
+			{
+				name: 'Pago mis cuentas'
+			}
+		],
+		steps: [
+			{   
+				documentType: 'Confirmar presentacion',
+				status: 'ON_TIME',
+				update_date: '12/2020'       
+			},
+						{   
+				documentType: 'Generar VEP de pago',
+				status: 'PENDING',
+				update_date: '12/2020'       
+			},
+			{   
+				documentType: 'Confirmar pago',
+				status: 'PREPARING',
+				update_date: '12/2020'       
+			}
+		]
+	}
+]
+
+
+
+border {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+	}
+	
+
+element.style {
+    justify-content: space-between;
+    display: flex;

@@ -1,0 +1,41 @@
+query GetProfileQuestions {
+  me{
+    taxes: taxesWithProfileQuestions{
+      name
+      short_name
+      status
+      period_type
+      profileQuestions{
+        title
+        body
+        image
+        type
+        id
+        question{
+          input_label
+          input_rules
+          inputs{
+            key
+            label
+            type
+            value
+          }
+          options{
+            label
+            value
+          }
+          value
+          selected
+          values{
+            key
+            value
+          }
+        }
+        rules{
+          key
+          parameters
+        }
+      }
+    }
+  }
+}

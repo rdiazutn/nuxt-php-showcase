@@ -1,0 +1,236 @@
+@import './variables.scss';
+body, body *,.v-application .headline{
+  font-family: "Roboto" !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-green{
+  color: $green-link;
+}
+
+.text-grey{
+  color: $grey-color;
+}
+
+.bg-default{
+  background-color:#F1F1F1;
+}
+
+.headline-card{
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: $dark-color !important;
+  letter-spacing: 0.15px !important;
+}
+
+.headline-table{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: $dark-color !important;
+  letter-spacing: 0.15px !important;
+}
+
+.subtitle-1{
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: $dark-color !important;
+  letter-spacing: 0.15px !important;
+}      
+
+.subtitle-2{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: $grey-color;
+  letter-spacing: 0.15px !important;
+}
+
+.body-1{
+  font-size: 16px !important;
+  color: $grey-color !important;
+  letter-spacing: 0.5px !important;
+}
+
+.body-2{
+  font-size: 14px !important;
+  color: $grey-color !important;
+  letter-spacing: 0.25px !important;
+}
+
+.alert-text{
+  font-size: 14px !important;
+  color: $dark-color !important;
+  letter-spacing: 0.25px !important;
+}
+
+@media (min-width: 960px) {
+
+  .headline-1{
+    font-family: "Century Gothic" !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: $dark-color !important;
+    letter-spacing: 0.25px !important;
+    }
+
+  .headline-2{
+    font-family: "Century Gothic" !important;
+    word-break: break-word !important;
+    font-weight: bold !important;
+    font-size: 26px !important;
+    color: $dark-color !important;
+  }
+
+  .headline-question{
+    font-size: 22px !important;
+    color: $dark-color !important;
+    letter-spacing: 0.15px !important;
+  }
+  
+  .body-question{
+    font-size: 20px !important;
+    font-family: Roboto !important;
+    color: $grey-color !important;
+    letter-spacing: 0.25px !important;
+  }
+  
+  .details-1{
+    font-size: 14px !important;
+    letter-spacing: 0.25px !important;
+  }
+
+  .details-2{
+    font-size: 12px !important;
+    letter-spacing: 0.4px !important;
+  }
+}
+
+@media (max-width: 959px) {
+
+  .headline-1{
+    font-family: "Century Gothic" !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    color: $dark-color !important;
+    letter-spacing: 0.25px !important;
+    }
+
+  .headline-2{
+    font-family: "Century Gothic" !important;
+    word-break: break-word !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    color: $dark-color;
+  }
+
+  .headline-question{
+    font-size: 20px !important;
+    font-family: "Roboto" !important;
+    color: $dark-color !important;
+  }
+
+  .body-question{
+    font-size: 16px !important;
+    font-family: Roboto !important;
+    color: $grey-color !important;
+    letter-spacing: 0.15px !important;
+  }
+
+  .details-1{
+    font-size: 12px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .details-2{
+    font-size: 10px !important;
+    letter-spacing: 1.25px !important;
+  }
+}
+
+.v-btn__content{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.custom-link{
+  font-size: 16px;
+  text-decoration: none !important;
+  color: $green-link !important;
+}
+
+.custom-link-grey{
+  font-size: 14px;
+  text-decoration: none !important;
+  color: $grey-color !important;
+}
+
+.custom-link-primary{
+  font-size: 14px;
+  text-decoration: none !important;
+  color: $primary-color !important;
+}
+
+.align-center-vertical{
+  display: flex;
+  align-items: center;
+}
+
+.v-expansion-panel-content__wrap{
+  padding: 0px !important;
+}
+
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.orange-bg-text{
+  color: #f0964d;
+  background-color: #FEF0E5;
+}
+
+.green-bg-text{
+  color: white;
+  background-color: #4CAF50;
+}
+
+.text-start{
+  text-align: start !important;
+}
+
+.hideInput{
+  height: 0px !important;
+}
+
+.bg-alert{
+  background-color: #eaebed !important;
+}
+
+.border-solid-lightgray{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.flexbox-between{
+  justify-content: space-between;
+  display: flex;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,5 @@
+mutation AnswerProfileQuestions($answers: [AnswerProfileQuestionInput!]!) {
+    answerProfileQuestions(answers: $answers) {
+        id
+    }
+}

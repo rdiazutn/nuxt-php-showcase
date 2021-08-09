@@ -1,0 +1,5 @@
+mutation ($periodId: ID! $input: AnswerIIBBMonthlyDeclarationInput!){
+    answerIIBBMonthlyDeclaration(periodId: $periodId input: $input) {
+        __typename
+    }
+}

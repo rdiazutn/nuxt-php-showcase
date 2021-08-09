@@ -1,0 +1,10 @@
+mutation UpdateNotification($id: ID! $input: NotificationInput) {
+    updateNotification(id: "1df2de5b-a5eb-446b-be5a-03f43af801f3", input: $input) {
+        id
+        type
+        read
+        bookmarked
+        title
+        body
+    }
+}

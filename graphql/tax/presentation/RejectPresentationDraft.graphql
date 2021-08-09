@@ -1,0 +1,5 @@
+mutation RejectPresentationDraft($periodId: ID! $comment: String) {
+    rejectPresentationDraft(periodId: $periodId comment: $comment) {
+        id
+    }
+}

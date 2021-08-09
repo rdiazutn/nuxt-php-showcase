@@ -1,0 +1,38 @@
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Query {
+    users: [Customer!]! @paginate(defaultCount: 10)
+    me: Customer @auth
+    tax(id: ID @eq): Tax @find
+}
+
+type Customer {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+    profile_status: ProfileStatus!
+    taxesWithProfileQuestions: [Tax!]! @belongsToMany
+    notifications(filter: NotificationFilter): [Notification!]! @hasMany(type: PAGINATOR)
+}
+
+type File {
+    id: ID!
+    created_at: DateTime!
+    updated_at: DateTime!
+    name: String!
+    url: String!
+}
+
+input CreateUserBelongsTo {
+    connect: ID
+}
+
+#import profile.graphql
+#import tax.graphql
+#import notification.graphql

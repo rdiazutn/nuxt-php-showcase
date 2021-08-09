@@ -1,0 +1,63 @@
+query ($first: Int! $page: Int! $id: ID $tax_id: ID $statuses: [TaxPeriodStatus] $period_date: Date){
+    me{
+        taxPeriods(first: $first page: $page id: $id tax_id: $tax_id status: $statuses period_date: $period_date){
+            data{
+                IIBBMonthlyDeclaration{
+                    billing{
+                        activities{
+                            key
+                            label
+                            regions {
+                                key
+                                name
+                                value
+                                iva
+                            }
+                        }
+                    }
+                    not_invoiced {
+                        concepts {
+                            key
+                            label
+                            value
+                        }
+                        extra {
+                            key
+                            label
+                            value
+                        }
+                    }
+                    not_income {
+                        concepts {
+                            key
+                            label
+                            value
+                        }
+                        extra {
+                            key
+                            label
+                            value
+                        }
+                    }
+                    deductions {
+                        with_holdings {
+                            key
+                            label
+                            value
+                        }
+                        perceptions {
+                            key
+                            label
+                            value
+                        }
+                        sircreb {
+                            key
+                            label
+                            value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
